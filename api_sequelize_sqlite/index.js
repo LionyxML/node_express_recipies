@@ -9,10 +9,9 @@ const app = express();
 
 app.use(express.json());
 
-app.post("/users", (req, res) => {
-  User.create(req.body).then(() => {
-    res.send("User is inserted");
-  });
+app.post("/users", async (req, res) => {
+  await User.create(req.body);
+  res.send("User is inserted");
 });
 
 app.listen(3000, () => {
