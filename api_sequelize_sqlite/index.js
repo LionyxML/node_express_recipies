@@ -3,7 +3,7 @@ const sequelize = require("./database");
 const User = require("./User");
 
 // init on database
-sequelize.sync().then(() => console.log("DB is ready"));
+sequelize.sync({ force: true }).then(() => console.log("DB is ready"));
 
 const app = express();
 
