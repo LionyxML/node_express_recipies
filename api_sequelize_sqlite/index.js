@@ -7,6 +7,8 @@ sequelize.sync().then(() => console.log("DB is ready"));
 
 const app = express();
 
+app.use(express.json());
+
 app.post("/users", (req, res) => {
   User.create(req.body).then(() => {
     res.send("User is inserted");
