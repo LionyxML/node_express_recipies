@@ -25,22 +25,23 @@
     "/login": {
       "post": {
         "tags": [],
-        "description": "",
+        "description": "Route for user authentication.",
         "parameters": [
           {
-            "name": "obj",
+            "name": "email",
+            "description": "User e-mail address.",
+            "type": "string",
+            "required": true,
             "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "email": {
-                  "example": "any"
-                },
-                "password": {
-                  "example": "any"
-                }
-              }
-            }
+            "example": "user@email.com"
+          },
+          {
+            "name": "password",
+            "description": "Users password.",
+            "type": "string",
+            "required": true,
+            "in": "body",
+            "example": "SDSDsd223@@#!"
           }
         ],
         "responses": {

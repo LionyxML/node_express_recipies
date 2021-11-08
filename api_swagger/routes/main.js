@@ -7,6 +7,28 @@ router.get("/", (_, res) => {
 });
 
 router.post("/login", (req, res) => {
+  /*
+    #swagger.description = 'Route for user authentication.'
+  */
+
+  /*
+    #swagger.parameters['email'] = {
+        description: 'User e-mail address.',
+        type: 'string',
+        required: true,
+    in: 'body',
+        example: 'user@email.com',
+    }
+
+    #swagger.parameters['password'] = {
+    description: 'Users password.',
+    type: 'string',
+    required: true,
+    in: 'body',
+    example: 'SDSDsd223@@#!',
+    }
+  */
+
   try {
     const { email, password } = req.body;
 
